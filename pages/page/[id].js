@@ -2,7 +2,7 @@ import styles from "../../styles/app.module.scss";
 import Link from "next/link";
 
 const Page = ({page}) => {
-    const newData = page.docDate.split('-').reverse().join('.')
+    const newDate = page.docDate.split('-').reverse().join('.')
 
     return (
         <div className={styles.wrapper}>
@@ -15,7 +15,7 @@ const Page = ({page}) => {
                 <tr className={styles.row}>
                     <td className={styles.td}>{page.displayName}</td>
                     <td className={styles.td}>{page.description ? page.description : 'no data'}</td>
-                    <td className={styles.td}>{newData}</td>
+                    <td className={styles.td}>{newDate}</td>
                 </tr>
             </table>
             <Link href='/'><a>Back</a></Link>
